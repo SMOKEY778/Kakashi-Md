@@ -32,6 +32,21 @@ command(
 
 command(
   {
+    pattern: "setbio ?(.*)",
+    fromMe: true,
+    desc: "To change your profile status",
+    type: "user",
+  },
+  async (message, match) => {
+    match = match || message.reply_message.text
+    if (!match) return await message.reply("_Need Status!_\n_Example: setbio Hey there! I am using WhatsApp._");
+    await message.updateBio(match);
+    return await message.reply("_Profile status updated_");
+  }
+);
+
+command(
+  {
     pattern: "block ?(.*)",
     fromMe: true,
     desc: "Block a person",
@@ -87,6 +102,73 @@ command(
     );
   }
 );
+
+command(
+  {
+    pattern: "react ?(.*)",
+    fromMe: true,
+    desc: "sends reaction",
+    type: "user" ,
+  },
+  async (message, match) => {
+   await message.react(
+     match, message.reply_message.key
+   );
+  }
+);
+
+command(
+  {
+    pattern: "pin ?(.*)",
+    fromMe: true,
+    desc: "Pin a chat",
+    type: "whatsapp",
+  },
+  async (message, match) => {
+    await message.pinChat(message.jid, true)
+    await message.reply("_Pined_");
+  }
+);
+
+command(
+  {
+    pattern: "unpin ?(.*)",
+    fromMe: true,
+    desc: "Unpin a chat",
+    type: "whatsapp",
+  },
+  async (message, match) => {
+    await message.pinChat(message.jid, false)
+    await message.reply("_Unpined_");
+  }
+);
+
+command(
+  {
+    pattern: "archive ?(.*)",
+    fromMe: true,
+    desc: "Archive a chat",
+    type: "whatsapp",
+  },
+  async (message, match) => {
+    await message.archiveChat(message.jid, true)
+    await message.reply("_Archived_")
+  }
+);
+
+command(
+  {
+    pattern: "unarchive ?(.*)",
+    fromMe: true,
+    desc: "Unarchive a chat",
+    type: "whatsapp",
+  },
+  async (message, match) => {
+    await message.archiveChat(message.jid, false)
+    await message.reply("_Unarchived_")
+  }
+);
+
 
 command(
   {
