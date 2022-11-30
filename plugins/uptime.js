@@ -1,7 +1,7 @@
-const {command, isPublic} = require('../lib/')
+const {command, isPrivate} = require('../lib/')
 command({
   pattern: 'uptime',
-  fromMe: isPublic,
+  fromMe: isPrivate,
   type: 'utility',
   desc: 'Shows system (OS) /process uptime'
 }, (async (message, match) => {
@@ -26,7 +26,7 @@ command({
 
 command({
   pattern: 'runtime',
-  fromMe: isPublic,
+  fromMe: isPrivate,
   type: 'utility',
   desc: 'Shows system (OS) /process uptime'
 }, (async (message, match) => {
