@@ -1,5 +1,5 @@
 const {
-    Module, isPublic
+    command, isPublic
 } = require('../lib/');
 const fs = require('fs');
 const ffmpeg = require('fluent-ffmpeg');
@@ -9,7 +9,7 @@ const {
 } = require('../lib/misc/lang');
 const Lang = getString('converters');
 
-Module({
+command({
     pattern: 'mp3 ?(.*)',
     fromMe: isPublic,
     type: 'edit',
@@ -32,7 +32,7 @@ Module({
         });
 }));
 
-Module({
+command({
     pattern: 'photo ?(.*)',
     fromMe: isPublic,
     type: 'edit',
