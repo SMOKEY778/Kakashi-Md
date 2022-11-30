@@ -1,4 +1,4 @@
-const {find} = require('truecallerjs')
+const {find} = require('abu-bot')
 const {command, isPublic } = require('../lib/');
 command({pattern: 'true ?(.*)', desc: 'Searches for number in truecaller!',type: 'search',fromMe: isPublic}, async (message, query) => {
 let user =  (message.mention[0] || message.reply_message?.jid || query[1]).split("@")[0]
