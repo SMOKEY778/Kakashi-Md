@@ -87,7 +87,18 @@ Description : ${i.desc}\`\`\``
             buttonId: `${prefix}list`,
             buttonText: { displayText: serif_B("LIST 🎈 ") },
           },
-        ],
+        ], contextInfo: {
+				externalAdReply: {
+					title: "Kakashi Md",
+					body: "Made By Turbo Mods",
+					mediaType: 2,
+					thumbnail: image2,
+					mediaUrl: 'https://www.instagram.com/toxic_turbo777',
+					sourceUrl: 'https://github.com/TURBOHYPER/Kakashi-Md',
+					showAdAttribution:true
+					}
+				}
+			},
       });
     }
   }
