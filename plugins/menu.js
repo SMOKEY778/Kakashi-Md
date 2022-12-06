@@ -92,7 +92,7 @@ Description : ${i.desc}\`\`\``
 					title: "Kakashi Md",
 					body: "Made By Turbo Mods",
 					mediaType: 2,
-					thumbnail: image2,
+					thumbnail: 'fs.readFileSync('./TurboMedia/slayer.jpg')',
 					mediaUrl: 'https://www.instagram.com/toxic_turbo777',
 					sourceUrl: 'https://github.com/TURBOHYPER/Kakashi-Md',
 					showAdAttribution:true
