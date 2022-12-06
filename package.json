@@ -3,9 +3,12 @@
   "version": "1.0.0",
   "description": "Made By TurboMods.",
   "main": "index.js",
-  "scripts": {
-    "start": "pm2 start . --attach --name vtxyz"
-  },
+  "type": "commonjs",
+               "license": "GPL-3.0",
+   "scripts": {
+                "start": "pm2 start index.js --deep-monitoring --attach --name kakashi",
+                "stop": "pm2 stop kakashi"
+                },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/TURBOHYPER/Kakashi-Md.git"
@@ -53,6 +56,7 @@
     "pastebin-js": "^1.0.6",
     "scraper-x0": "^1.0.6",
     "pg": "^8.8.0",
+    "pm2": "^5.2.0",
     "pino": "^8.1.0",
     "qrcode": "^1.5.1",
     "qrcode-reader": "^1.0.4",
