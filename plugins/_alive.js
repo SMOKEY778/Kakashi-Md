@@ -16,7 +16,7 @@ const audios = "https://i.imgur.com/oJnmrH5.jpeg";
 command
 	(
 		{
-			pattern: "alive2?(.*)",
+			pattern: "2alive?(.*)",
 			fromMe: isPublic,
 			type: "menu",
 		},
