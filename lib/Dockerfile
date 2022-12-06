@@ -1,5 +1,4 @@
-FROM node:latest
-ENV TZ=Asia/Kolkata
+FROM quay.io/lyfe00011/md:lastest
 RUN git clone https://github.com/TOXICTURBO/Kakashi-Md1 /root/Turbo/
 WORKDIR /root/Turbo/
 COPY package*.json ./
