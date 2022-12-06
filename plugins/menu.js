@@ -77,28 +77,22 @@ Description : ${i.desc}\`\`\``
         caption: menu,
         footer: tiny(
           `Kakashi Public Bot\nVersion : ${require("../package.json").version}`
-        ),
-        buttons: [
-          {
-            buttonId: `${prefix}ping`,
-            buttonText: { displayText: serif_B("PING 🎈") },
-          },
-          {
-            buttonId: `${prefix}list`,
-            buttonText: { displayText: serif_B("LIST 🎈 ") },
-          },
-        ], contextInfo: {
+        ), buttons: [
+        {buttonId: '.list', buttonText: {displayText: 'MENU'}},
+      {buttonId: '.ping', buttonText: {displayText: 'PING'}},{buttonId: '.git', buttonText: {displayText: 'GIT'}}
+    ],
+			contextInfo: {
 				externalAdReply: {
-					title: "Kakashi Md",
-					body: "Made By Turbo Mods",
+					title: "Kakashi-Md",
+					body: "Made By TurboMods",
 					mediaType: 2,
 					thumbnail: `fs.readFileSync('./media/20221002_222728.jpg')`,
-					mediaUrl: 'https://www.instagram.com/toxic_turbo777',
+					mediaUrl: 'https://www.instagram.com/',
 					sourceUrl: 'https://github.com/TURBOHYPER/Kakashi-Md',
 					showAdAttribution:true
 					}
 				}
-			},
+			}, { quoted: message }
       });
     }
   }
