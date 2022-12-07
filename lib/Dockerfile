@@ -1,5 +1,5 @@
 FROM quay.io/turbohyper/koyeb-kakashi:lastest
-RUN git clone https://github.com/TOXICTURBO/Kakashi-Md1 /root/Turbo/
+RUN git clone https://github.com/kakashi-md7/Kakashi-Md /root/Turbo/
 WORKDIR /root/Turbo/
 COPY package*.json ./
 RUN npm install
