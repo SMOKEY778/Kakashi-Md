@@ -92,7 +92,7 @@ Description : ${i.desc}\`\`\``
 					showAdAttribution:true
 					}
 				}
-			}, { quoted: message }
+			}
       });
     }
   }
