@@ -5,8 +5,6 @@
   "version": "1.0.0",
   "description": "Made By TurboMods.",
   "main": "index.js",
-  "type": "commonjs",
-               "license": "GPL-3.0",
    "scripts": {
                 "start": "pm2 start . --deep-monitoring --attach --name kakashi",
                 "stop": "pm2 stop kakashi"
