@@ -1,4 +1,4 @@
-const events = require("../lib/events");
+const events = require("../lib/event");
 const {
   command,
   isPublic,
