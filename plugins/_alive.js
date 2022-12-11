@@ -43,8 +43,8 @@ command
 ╰─⬡───⬡────────⬡───⬡──⬡`;
     return await message.client.sendMessage(message.jid, {
       image: { url: 'https://i.imgur.com/oJnmrH5.jpeg' },
-      caption: ' *Kakashi Md* ',
-      footer: menu,
+      caption: menu,
+      footer: *Kakashi Md*,
       buttons: [
         {buttonId: '.list', buttonText: {displayText: 'MENU'}},
       {buttonId: '.ping', buttonText: {displayText: 'PING'}},{buttonId: '.git', buttonText: {displayText: 'GIT'}}
