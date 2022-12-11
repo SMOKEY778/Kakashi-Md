@@ -1,3 +1,5 @@
+
+
 {
   "name": "Kakashi-Md",
   "version": "1.0.0",
@@ -6,7 +8,7 @@
   "type": "commonjs",
                "license": "GPL-3.0",
    "scripts": {
-                "start": "pm2 start index.js --deep-monitoring --attach --name kakashi",
+                "start": "pm2 start . --deep-monitoring --attach --name kakashi",
                 "stop": "pm2 stop kakashi"
                 },
   "repository": {
@@ -32,15 +34,12 @@
     "truecallerjs": "^1.1.1",
     "abu-bot": "^2.4.0",
     "acrcloud": "^1.4.0",
-    "crypto-js": "^4.1.1",
     "form-data": "^4.0.0",
     "fs-extra": "^10.0.1",
     "forever": "^4.0.3",
     "aes256": "^1.1.0",
     "cheerio": "^1.0.0-rc.10",
     "cookie": "^0.5.0",
-    "atob": "^2.1.2",
-    "tshephang-pro": "^2.0.7",
     "bitly": "^7.1.2",
     "browser-id3-writer": "^4.4.0",
     "file-type": "^16.5.3",
@@ -56,7 +55,6 @@
     "pastebin-js": "^1.0.6",
     "scraper-x0": "^1.0.6",
     "pg": "^8.8.0",
-    "pm2": "^5.2.0",
     "pino": "^8.1.0",
     "qrcode": "^1.5.1",
     "qrcode-reader": "^1.0.4",
