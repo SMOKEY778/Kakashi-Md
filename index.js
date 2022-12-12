@@ -11,6 +11,9 @@ const pino = require("pino");
 const path = require("path");
 const events = require("./lib/event");
 const got = require("got");
+const express = require("express");
+const app = express();
+const port = process.env.PORT || 8000;
 const config = require("./config");
 const { PluginDB } = require("./lib/database/plugins");
 const Greetings = require("./lib/Greetings");
@@ -170,6 +173,10 @@ async function Turbo() {
     console.log(err);
   });
 }
+app.get("/", (req, res) => {
+  res.send("hello world");
+});
+app.listen(port, () => console.log(`app listening on port http://localhost:${port}`));
 setTimeout(() => {
   Turbo();
 }, 3000);
