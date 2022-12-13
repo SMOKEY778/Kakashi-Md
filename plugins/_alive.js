@@ -56,7 +56,7 @@ How Are You? 😊
 │ Hᴏꜱᴛ Nᴀᴍᴇ : Koyeb
 ╰─⬣
 Please Select Button Below`;
-    return await message.client.sendMessage(message.jid, ftoko, {
+    return await message.client.sendMessage(message.jid, {
       image: { url: 'https://i.imgur.com/oJnmrH5.jpeg' },
       caption: menu,
       footer: "*Kakashi Md*",
