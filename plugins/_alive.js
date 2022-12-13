@@ -7,7 +7,6 @@ const {
   handler 
 } = require("../lib");
 const { FancyRandom, jslbuffer } = require('abu-bot');
-const { OWNER_NAME, BOT_NAME,SUDO } = require("../config");
 
 
 const image = "https://i.imgur.com/oJnmrH5.jpeg";
@@ -18,29 +17,13 @@ command
 	(
 		{
 			pattern: "alive?(.*)",
-                        react: "🇮🇳",
 			fromMe: isPublic,
 			type: "menu",
 		},
 		async (message, match) => {
-  var ut_sec = require("os").uptime(); 
-  var ut_min = ut_sec/60; 
-  var ut_hour = ut_min/60; 
-  ut_sec = Math.floor(ut_sec); 
-  ut_min = Math.floor(ut_min); 
-  ut_hour = Math.floor(ut_hour); 
-  ut_hour = ut_hour%60; 
-  ut_min = ut_min%60; 
-  ut_sec = ut_sec%60; 
-  var uptime_os = (`_System (OS) : ${ut_hour} Hour(s), ${ut_min} minute(s) and ${ut_sec} second(s)_`)  
-  var sec_num = parseInt(process.uptime(), 10);
-  var hours   = Math.floor(sec_num / 3600);
-  var minutes = Math.floor((sec_num - (hours * 3600)) / 60);
-  var seconds = sec_num - (hours * 3600) - (minutes * 60);
-  var uptime_process = (`${hours} Hour(s), ${minutes} minute(s) and ${seconds} second(s)_`)
-  const image1 = await Jslbuffer(image)
-  const image2 = await Jslbuffer(image_1)
-  const audio = await Jslbuffer(audios)
+			const image1 = await jslbuffer(image)
+			const image2 = await jslbuffer(image_1)
+			const audio = await jslbuffer(audios)
       
 		const stars = ['×'];
   const star = stars[Math.floor(Math.random()*stars.length)];
@@ -51,11 +34,11 @@ command
 How Are You? 😊
 ╭─⬣「 INFO BOT 」⬣
 │
-│ Rᴜɴᴛɪᴍᴇ : ${uptime_process}
-│ Bᴏᴛ Nᴀᴍᴇ : ${BOT_NAME}
-│ Oᴡɴᴇʀ Nᴀᴍᴇ : ${OWNER_NAME}
-│ Oᴡɴᴇʀ Nᴜᴍʙᴇʀ : ${SUDO}
-│ Hᴏꜱᴛ Nᴀᴍᴇ : ${hostname().split("-")[0]}
+│ Rᴜɴᴛɪᴍᴇ : 
+│ Bᴏᴛ Nᴀᴍᴇ : Kakashi Md
+│ Oᴡɴᴇʀ Nᴀᴍᴇ : TurboMods
+│ Oᴡɴᴇʀ Nᴜᴍʙᴇʀ : 2347086086722
+│ Hᴏꜱᴛ Nᴀᴍᴇ : Koyeb
 ╰─⬣
 Please Select Button Below`;
     return await message.client.sendMessage(message.jid, {
