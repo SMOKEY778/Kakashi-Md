@@ -76,18 +76,24 @@ test3 = {
 				remoteJid: `status@broadcast`
 			} : {})
 		},
-		message: { 
-		requestPaymentMessage: {
-      currencyCodeIso4217: 'USD',
-      amount1000: 50000000,
-      requestFrom: 'TurboMods',
-      noteMessage: {
-      extendedTextMessage: {
-      text: 'Kakashi Made By Turbo',
-      contextInfo: {
-      externalAdReply: {
-      showAdAttribution: true
-      }}}
+		message: {
+			"productMessage": {
+				"product": {
+					"productImage":{
+						"mimetype": "image/jpeg",
+						"jpegThumbnail": fs.readFileSync('./media/20221002_222728.jpg')
+					},
+					"title": 'Kakashi-Md,
+					"description": 'Made By Turbo Mods, 
+					"currencyCode": "USD",
+					"priceAmount1000": "20000000",
+					"retailerId": "Ghost",
+					"productImageCount": 1
+				},
+				    "businessOwnerJid": `0@s.whatsapp.net`
+		}
+	}
+}
 
 
       
