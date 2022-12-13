@@ -31,11 +31,11 @@ test = {
 				remoteJid: `status@broadcast`
 			} : {})
 		},
-		message: {
-			'contactMessage': {
-				'displayName': 'One And Only King Turbo Mods😻',
-				'vcard': `BEGIN:VCARD\nVERSION:3.0\nN:XL;'One And Only King Turbo Mods 😻',;;;\nFN:'One And Only King Turbo Mods ',\nitem1.TEL;waid=${m.sender.split('@')[0]}:${m.sender.split('@')[0]}\nitem1.X-ABLabel:Ponsel\nEND:VCARD`,
-				'jpegThumbnail': image2
+		message: { 
+		"audioMessage": {
+                 "mimetype":"audio/ogg; codecs=opus",
+                 "seconds": "999999999999",
+                 "ptt": "true"
 			}
 		}
 	}
