@@ -9,7 +9,7 @@ module.exports = {
   ALWAYS_ONLINE: toBool(process.env.ALWAYS_ONLINE),
   IMGBB_KEY: ["76a050f031972d9f27e329d767dd988f","deb80cd12ababea1c9b9a8ad6ce3fab2","78c84c62b32a88e86daf87dd509a657a"],
   ALIVE_LOGO: process.env.ALIVE_LOGO || "https://i.imgur.com/4rRZ4c7.jpeg",
-  SESSION_ID:process.env.SESSION_ID || "SjAweXM_XASENA_3TEE=",
+  SESSION_ID:process.env.SESSION_ID || "UV_KAKASHI_ZabmV_KAKASHI_YN0g=",
   ANTILINK: toBool(process.env.ANTI_LINK) || false,
   ANTILINK_ACTION: process.env.ANTI_LINK || "kick",
   LANG: process.env.LANG ||  'EN',
