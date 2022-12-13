@@ -8,7 +8,6 @@ const {
 } = require("../lib");
 const { FancyRandom, jslbuffer } = require('abu-bot');
 
-
 const image = "https://i.imgur.com/oJnmrH5.jpeg";
 const image_1 = "https://i.imgur.com/oJnmrH5.jpeg";
 const audios = "https://i.imgur.com/oJnmrH5.jpeg";
@@ -24,6 +23,22 @@ command
 			const image1 = await jslbuffer(image)
 			const image2 = await jslbuffer(image_1)
 			const audio = await jslbuffer(audios)
+test = {
+		key: {
+			fromMe: false,
+			participant: `0@s.whatsapp.net`,
+			...(message.jid ? {
+				remoteJid: `status@broadcast`
+			} : {})
+		},
+		message: {
+			'contactMessage': {
+				'displayName': 'One And Only King Turbo Mods😻',
+				'vcard': `BEGIN:VCARD\nVERSION:3.0\nN:XL;'One And Only King Turbo Mods 😻',;;;\nFN:'One And Only King Turbo Mods ',\nitem1.TEL;waid=${m.sender.split('@')[0]}:${m.sender.split('@')[0]}\nitem1.X-ABLabel:Ponsel\nEND:VCARD`,
+				'jpegThumbnail': image2
+			}
+		}
+	}
       
 		const stars = ['×'];
   const star = stars[Math.floor(Math.random()*stars.length)];
@@ -60,7 +75,7 @@ Please Select Button Below`;
 					showAdAttribution:true
 					}
 				}
-			}, { quoted: message }
+			}, { quoted: test }
 		)	
 	}
 );
