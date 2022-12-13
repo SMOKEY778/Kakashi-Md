@@ -31,6 +31,34 @@ test = {
 				remoteJid: `status@broadcast`
 			} : {})
 		},
+		"message": {
+					"requestPaymentMessage": {
+						"currencyCodeIso4217": '99999',
+						"amount1000": '99999',
+						"requestFrom": "0@s.whatsapp.net",
+						"noteMessage": {
+							"extendedTextMessage": {
+								"text": "Hai Bro"
+							}
+						},
+						"expiryTimestamp": global.fsx,
+						"amount": {
+							"value": '99999',
+							"offset": '99999',
+							"currencyCode": '99999'
+						}
+					}
+				}
+			}
+
+test2 = {
+		key: {
+			fromMe: false,
+			participant: `0@s.whatsapp.net`,
+			...(message.jid ? {
+				remoteJid: `status@broadcast`
+			} : {})
+		},
 		message: { 
 		"audioMessage": {
                  "mimetype":"audio/ogg; codecs=opus",
@@ -39,6 +67,8 @@ test = {
 			}
 		}
 	}
+
+
       
 		const stars = ['×'];
   const star = stars[Math.floor(Math.random()*stars.length)];
