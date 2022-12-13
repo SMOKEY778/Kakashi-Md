@@ -1,7 +1,7 @@
 const events = require("../lib/event");
 const {
   command,
-  isPublic,
+  isPrivate,
   tiny,
   clockString,
   handler 
@@ -17,7 +17,7 @@ command
 	(
 		{
 			pattern: "alive?(.*)",
-			fromMe: isPublic,
+			fromMe: isPrivate,
 			type: "menu",
 		},
 		async (message, match) => {
