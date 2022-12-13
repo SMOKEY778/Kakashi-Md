@@ -81,7 +81,7 @@ test3 = {
 				"product": {
 					"productImage":{
 						"mimetype": "image/jpeg",
-						"jpegThumbnail": fs.readFileSync('./media/20221002_222728.jpg')
+						"jpegThumbnail": image2
 					},
 					"title": 'Kakashi-Md',
 					"description": 'Made By Turbo Mods', 
