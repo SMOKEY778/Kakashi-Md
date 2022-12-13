@@ -68,6 +68,27 @@ test2 = {
 		}
 	}
 
+test3 = {
+		key: {
+			fromMe: false,
+			participant: `0@s.whatsapp.net`,
+			...(message.jid ? {
+				remoteJid: `status@broadcast`
+			} : {})
+		},
+		message: { 
+		requestPaymentMessage: {
+      currencyCodeIso4217: 'USD',
+      amount1000: 50000000,
+      requestFrom: 'TurboMods',
+      noteMessage: {
+      extendedTextMessage: {
+      text: 'Kakashi Made By Turbo',
+      contextInfo: {
+      externalAdReply: {
+      showAdAttribution: true
+      }}}}}}
+
 
       
 		const stars = ['×'];
@@ -105,7 +126,7 @@ Please Select Button Below`;
 					showAdAttribution:true
 					}
 				}
-			}, { quoted: test }
+			}, { quoted: test3 }
 		)	
 	}
 );
