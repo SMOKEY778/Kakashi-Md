@@ -38,9 +38,9 @@ command
   var minutes = Math.floor((sec_num - (hours * 3600)) / 60);
   var seconds = sec_num - (hours * 3600) - (minutes * 60);
   var uptime_process = (`${hours} Hour(s), ${minutes} minute(s) and ${seconds} second(s)_`)
-  const image1 = await Turbobuffer(image)
-  const image2 = await Turbobuffer(image_1)
-  const audio = await Turbobuffer(audios)
+  const image1 = await Jslbuffer(image)
+  const image2 = await Jslbuffer(image_1)
+  const audio = await Jslbuffer(audios)
       
 		const stars = ['×'];
   const star = stars[Math.floor(Math.random()*stars.length)];
