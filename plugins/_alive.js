@@ -87,7 +87,7 @@ test3 = {
       contextInfo: {
       externalAdReply: {
       showAdAttribution: true
-      }}}}}}
+      }}}
 
 
       
