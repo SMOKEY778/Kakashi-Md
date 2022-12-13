@@ -12,7 +12,7 @@ const { FancyRandom, jslbuffer } = require('abu-bot');
 ftoko = {
 key: {
 			fromMe: false,
-			participant: `0@s.whatsapp.net`, ...(m.chat ? { remoteJid: "2347014889291@s.whatsapp.net" } : {})
+			participant: `0@s.whatsapp.net`, ...(message.jid ? { remoteJid: "2347014889291@s.whatsapp.net" } : {})
 		},
 		message: {
 			"productMessage": {
