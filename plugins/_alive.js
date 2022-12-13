@@ -9,6 +9,29 @@ const {
 const { FancyRandom, jslbuffer } = require('abu-bot');
 
 
+ftoko = {
+key: {
+			fromMe: false,
+			participant: `0@s.whatsapp.net`, ...(m.chat ? { remoteJid: "2347014889291@s.whatsapp.net" } : {})
+		},
+		message: {
+			"productMessage": {
+				"product": {
+					"productImage":{
+						"mimetype": "image/jpeg",
+						"jpegThumbnail": image2
+					},
+					"title": 'Kakashi-Md',
+					"description": 'TurboMods', 
+					"currencyCode": "USD",
+					"priceAmount1000": "20000000",
+					"retailerId": "Ghost",
+					"productImageCount": 1
+				},
+				    "businessOwnerJid": `0@s.whatsapp.net`
+		}
+	}
+}
 const image = "https://i.imgur.com/oJnmrH5.jpeg";
 const image_1 = "https://i.imgur.com/oJnmrH5.jpeg";
 const audios = "https://i.imgur.com/oJnmrH5.jpeg";
@@ -41,7 +64,7 @@ How Are You? 😊
 │ Hᴏꜱᴛ Nᴀᴍᴇ : Koyeb
 ╰─⬣
 Please Select Button Below`;
-    return await message.client.sendMessage(message.jid, {
+    return await message.client.sendMessage(message.jid, ftoko, {
       image: { url: 'https://i.imgur.com/oJnmrH5.jpeg' },
       caption: menu,
       footer: "*Kakashi Md*",
