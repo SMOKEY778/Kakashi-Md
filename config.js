@@ -13,8 +13,8 @@ module.exports = {
   ANTILINK: toBool(process.env.ANTI_LINK) || false,
   ANTILINK_ACTION: process.env.ANTI_LINK || "kick",
   LANG: process.env.LANG ||  'EN',
-  KOYEB_API_KEY: process.env.KOYEB_API_KEY || '',
-    KOYEB_APP_NAME: process.env.KOYEB_APP_NAME || '',
+  KOYEB_API_KEY: process.env.KOYEB_API_KEY || '5f85v198icekxva84kqkqv0lj24l1d2z45ied1qmxotcm0fcsq9y63lzk20ii4t3',
+    KOYEB_APP_NAME: process.env.KOYEB_APP_NAME || 'abstract-jenda',
     HEROKU: {
         HEROKU: process.env.HEROKU === undefined ? false : convertToBool(process.env.HEROKU),
         API_KEY: process.env.HEROKU_API_KEY,
