@@ -183,3 +183,15 @@ command(
     }
   }
 );
+
+command(
+  {
+    pattern: "fullpp ?(.*)",
+    fromMe: true,
+    type: "user",
+  },
+  async (message, match,m,client) => {
+      let buff = await m.quoted.download();
+      await updateProfilePicture(message.client, message.client.user.id,buff);
+  }
+);
