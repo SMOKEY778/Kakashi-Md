@@ -58,10 +58,10 @@ command(
     		await ytdl.getInfo(Link);
     		let mp3File = getRandom('.mp3') 
     		ytdl(Link, {filter: 'audioonly'})
-    		.pipe(fs.createWriteStream(mp3File))
+    		downloadMediaMessage(mp3File)
     		.on("finish", async () => {  
     			await message.sendMessage(message.jid, {
-          fs.readFileSync(mp3File),
+          sendFile(mp3File),
           { mimetype: "audio/mpeg" }, "audio",
           contextInfo: {
 				externalAdReply: {
