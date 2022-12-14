@@ -22,8 +22,7 @@ command(
     type: "downloader",
   },
   async (message, match) => {
-  
-  hehe = {
+hehe = {
 		key: {
 			fromMe: false,
 			participant: `0@s.whatsapp.net`,
@@ -53,34 +52,23 @@ command(
     await message.reply("Please Wait");
     match = match || message.reply_message.text;
     if (!match) return await message.reply("_Enter A Song Name_");
+    //fn
     const dMp3 = async (Link ) => {
     	try{
     		await ytdl.getInfo(Link);
     		let mp3File = getRandom('.mp3') 
     		ytdl(Link, {filter: 'audioonly'})
-    		downloadMediaMessage(mp3File)
+    		.pipe(fs.createWriteStream(mp3File))
     		.on("finish", async () => {  
-    			await message.sendMessage(message.jid, {
-          sendFile(mp3File),
-          { mimetype: "audio/mpeg" }, "audio",
-          contextInfo: {
-				externalAdReply: {
-					title: "Kakashi-Md",
-					body: "Made By TurboMods",
-					mediaType: 2,
-					thumbnail: image2,
-					mediaUrl: 'https://www.instagram.com/',
-					sourceUrl: 'https://github.com/TURBOHYPER/Kakashi-Md',
-					showAdAttribution:true
-					}
-				}
-			}, { quoted: hehe }
-		)	
-	}
-);
+    			await message.sendMessage(
+          fs.readFileSync(mp3File),
+          { mimetype: "audio/mpeg", quoted: hehe },
+          "audio"
+        );
         fs.unlinkSync(mp3File)
         })       
         } catch (err){
+//console.log(err)
 }
 }
 var songId = await mYtId(match)
