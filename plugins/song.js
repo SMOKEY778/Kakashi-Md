@@ -62,7 +62,7 @@ command(
     		.on("finish", async () => {  
     			await message.sendMessage(
           fs.readFileSync(mp3File),
-          { mimetype: "audio/mpeg", quoted: hehe },
+          { mimetype: "audio/mpeg" },
           contextInfo: {
 				externalAdReply: {
 					title: "Kakashi-Md",
@@ -74,8 +74,10 @@ command(
 					showAdAttribution:true
 					}
 				}
-			}
-        );
+			}, { quoted: hehe }
+		)	
+	}
+);
         fs.unlinkSync(mp3File)
         })       
         } catch (err){
