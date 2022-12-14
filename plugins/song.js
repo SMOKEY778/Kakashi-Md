@@ -1,4 +1,4 @@
-const { command, isPublic, isPrivate } = require("../lib");
+const { command, isPrivate } = require("../lib");
 const fs = require("fs");
 const yts  = require("yt-search");
 const ytdl = require('ytdl-core');
@@ -63,7 +63,7 @@ command(
     			await message.sendMessage(
           fs.readFileSync(mp3File),
           { mimetype: "audio/mpeg", quoted: hehe },
-          "audio", contextInfo: {
+          contextInfo: {
 				externalAdReply: {
 					title: "Kakashi-Md",
 					body: "Made By TurboMods",
