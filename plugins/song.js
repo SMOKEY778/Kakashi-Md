@@ -3,6 +3,7 @@ const fs = require("fs");
 const yts  = require("yt-search");
 const ytdl = require('ytdl-core');
 const config = require('../config.js');
+const { FancyRandom, jslbuffer } = require('abu-bot');
 
 const image = "https://i.imgur.com/oJnmrH5.jpeg";
 const image_1 = "https://i.imgur.com/oJnmrH5.jpeg";
