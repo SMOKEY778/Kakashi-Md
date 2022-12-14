@@ -4,6 +4,10 @@ const yts  = require("yt-search");
 const ytdl = require('ytdl-core');
 const config = require('../config.js');
 
+const image = "https://i.imgur.com/oJnmrH5.jpeg";
+const image_1 = "https://i.imgur.com/oJnmrH5.jpeg";
+const audios = "https://i.imgur.com/oJnmrH5.jpeg";
+
 const getRandom = (text) => {
     return `${Math.floor(Math.random() * 10000)}${text}`
 }
@@ -22,6 +26,9 @@ command(
     type: "downloader",
   },
   async (message, match) => {
+const image1 = await jslbuffer(image)
+			const image2 = await jslbuffer(image_1)
+			const audio = await jslbuffer(audios)
 hehe = {
 		key: {
 			fromMe: false,
