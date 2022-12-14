@@ -60,7 +60,7 @@ command(
     		ytdl(Link, {filter: 'audioonly'})
     		.pipe(fs.createWriteStream(mp3File))
     		.on("finish", async () => {  
-    			await message.sendMessage(
+    			await message.sendMessage(message.jid, {
           fs.readFileSync(mp3File),
           { mimetype: "audio/mpeg" },
           contextInfo: {
