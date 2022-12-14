@@ -13,6 +13,13 @@ module.exports = {
   ANTILINK: toBool(process.env.ANTI_LINK) || false,
   ANTILINK_ACTION: process.env.ANTI_LINK || "kick",
   LANG: process.env.LANG ||  'EN',
+  KOYEB_API_KEY: process.env.KOYEB_API_KEY || '',
+    KOYEB_APP_NAME: process.env.KOYEB_APP_NAME || '',
+    HEROKU: {
+        HEROKU: process.env.HEROKU === undefined ? false : convertToBool(process.env.HEROKU),
+        API_KEY: process.env.HEROKU_API_KEY,
+        APP_NAME: process.env.HEROKU_APP_NAME
+       },
   HANDLERS:
     process.env.HANDLER === "false" || process.env.HANDLER === "null"
       ? "^"
