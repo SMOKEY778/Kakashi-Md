@@ -62,7 +62,7 @@ command(
     		.on("finish", async () => {  
     			await message.sendMessage(message.jid, {
           fs.readFileSync(mp3File),
-          { mimetype: "audio/mpeg" },
+          { mimetype: "audio/mpeg" }, "audio",
           contextInfo: {
 				externalAdReply: {
 					title: "Kakashi-Md",
